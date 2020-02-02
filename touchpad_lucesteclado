@@ -1,0 +1,21 @@
+-----  ACTIVAR Y DESACTIVAR LUCES DE FONDO DE TECLADO  ----
+NOTA --> "SOLO SE CAMBIA EL VALOR 1 - 0"
+
+PRENDER
+echo 1 | sudo tee /sys/devices/platform/sony-laptop/kbd_backlight
+
+APAGAR
+echo 0 | sudo tee /sys/devices/platform/sony-laptop/kbd_backlight
+
+
+-----  ACTIVAR Y DESACTIVAR EL TOUCPAD   -----
+Se usa el comando xinput para saber el numero de id 
+en mi caso es el numero 13 y se realiza de la siguiente manera
+
+DESACTIVAR
+xinput disable 13
+
+ACTIVAR
+xinput enable 13
+
+
